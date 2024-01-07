@@ -23,7 +23,7 @@ public class GetLeaveTypesQueryHandler : IRequestHandler<GetLeaveTypesQuery, Lis
         var leaveTypes = await _leaveTypeRepository.GetAsync();
         var data = _mapper.Map<List<LeaveTypeDto>>(leaveTypes);
 
-        _logger.LogInformation("Leave types where retrieved successfully.");
+        _logger.LogInformation("Leave types were retrieved successfully.");
 
         return data;
     }
